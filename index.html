@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People MC</title>
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo.png" alt="logo"></a>
+      <a href="#more" class="desktop_navbar_link scroll">Features</a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#about" class="desktop_navbar_link scroll">Tentang</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="https://chat.whatsapp.com/FygWB24AUrU8zlaOFf2mFX" class="desktop_navbar_link2">Join Whatsapp</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#more">Features</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">Tentang</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://chat.whatsapp.com/FygWB24AUrU8zlaOFf2mFX">Join Whatsapp</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/peoplemc.png" alt="logo">
+        </a>
+        <div class="main1_description">
+          <a>Bermain Survival<br>Bersama</a>
+          <a class="main1_actcent">di dunia PeopleMC</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">play.peoplemc.net</span>
+            <br>
+            <span class="main1_ipcopier_text2">Click to copy</span>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("play.peoplemc.net");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">Fitur yang kami berikan</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Sethome</a>
+            <a class="main2_feature_text">Setwarp</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Aurelium skills</a>
+            <a class="main2_feature_text">Custom Enchant</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Random teleport/rtp</a>
+            <a class="main2_feature_text">ShopGUI</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Jobs</a>
+            <a class="main2_feature_text">Custom world</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Dan masih banyak fitur lainnya</a>
+            <a class="main2_feature_text">tidak cukup untuk di tampilkan Disini</a>
+          </div>
+        </div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join Discord</a>
+        <div class="main4_dc_div">
+          <iframe class="main4_dc_widget" src="https://discordapp.com/widget?id=1188079105665683456&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Keuntungan Join Discord!</a>
+            <a class="main4_dc_description"> ・Bertemu player lain <br> ・Info Giveaway <br> ・Update Terbaru <br> ・Saran untuk Server  <br> ・Report bug <br><br> &amp; dan lainya </a>
+            <a href="https://discord.gg/h8P2V3Xbwg" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Pembuat Server</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="media/member_logo.webp">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+              <a class="main5_admins_description_title">Jakiii</a>
+              <a class="main5_admins_description_title">Blue4XGT</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media/member_logo.webp">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
+              <a class="main5_admins_description_title">Bluzer_CBX</a>
+              <a class="main5_admins_description_title">Lorusp12</a>
+              <a class="main5_admins_description_title">RedGinz04</a>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+      <div id="join"></div>
+      <div class="main3">
+        <a class="headline">Server Address</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">Java</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Version:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>play.peoplemc.net</a>
+                <a>1.12.2-1.20.4</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Bedrock</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>play.peoplemc.net</a>
+                <a>19132</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright_div">
+      <a class="copyright">Contact: support@peoplemc.org</a>
+    </footer>
+  </body>
+</html>
