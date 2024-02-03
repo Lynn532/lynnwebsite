@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>People MC</title>
+    <title>People MC Minecraft server</title>
     <link rel="icon" type="image/png" href="media/logo.png">
     <link rel="stylesheet" href="media/style.css">
     <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
@@ -49,8 +49,8 @@
           <img class="main1_logo" src="media/peoplemc.png" alt="logo">
         </a>
         <div class="main1_description">
-          <a>Bermain Survival<br>Bersama</a>
-          <a class="main1_actcent">di dunia PeopleMC</a><a>.</a>
+          <a>Bermain <br>dan Bersenang-senang</a>
+          <a class="main1_actcent">Di Server PeopleMC</a><a>.</a>
         </div>
         <div class="main1_ipcopier_div">
           <button class="main1_ipcopier" onclick="copyText()" type="button">
@@ -75,23 +75,10 @@
             });
         </script>
         </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
+<div class="main1_status" id="serverStatus">
+    <h3 id="statusText">Checking...</h3>
+</div>
+<script src="script.js"></script>
       </div>
       <div id="more"></div>
       <div class="main2">
@@ -116,6 +103,16 @@
             <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
             <a class="main2_feature_headline">Jobs</a>
             <a class="main2_feature_text">Custom world</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Slimefun</a>
+            <a class="main2_feature_text">Teams</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
+            <a class="main2_feature_headline">Redprotect</a>
+            <a class="main2_feature_text">Ranks</a>
           </div>
           <div class="main2_feature">
             <img class="main2_feature_img" alt="Feature Image" src="media/logo.png">
@@ -191,14 +188,13 @@
               <div class="main3_join_values">
                 <a>play.peoplemc.xyz</a>
                 <a>25605</a>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <footer class="copyright_div">
-      <a class="copyright">Contact: support@peoplemc.xyz</a>
+      <a class="copyright">Contact: support@peoplemc.xyz | </a>
     </footer>
   </body>
 </html>

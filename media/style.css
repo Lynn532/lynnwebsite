@@ -230,6 +230,11 @@ body {
     margin-right: 1rem;
 }
 
+.main1_status {
+    text-align: center;
+    font-size:20px;
+}
+
 .main1_actcent {
     font-weight: 800;
     color:var(--accent1);
